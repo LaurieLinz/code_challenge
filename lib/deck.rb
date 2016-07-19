@@ -24,12 +24,7 @@ class Deck
   def draw(number_of_cards=5)
     drawn_cards = []
     number_of_cards.times { drawn_cards.push(@cards.pop) }
-
-    #drawn_cards.group_by {|a| a.value.to_s}
-    #drawn_cards.sort {|a,b| a.value.to_s <=> b.value.to_s}
-
-    #drawn_cards.sort {|a,b| a.value <=> b.value }.reverse
-    drawn_cards.group_by { |a| a.suit }
+    drawn_cards.sort {|a,b| a.value <=> b.value }.reverse
   end
 
   def shuffle
